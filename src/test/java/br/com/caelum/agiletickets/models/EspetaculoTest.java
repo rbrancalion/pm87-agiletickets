@@ -97,7 +97,7 @@ public class EspetaculoTest {
 		DateTime dataFim = dataInicio.plusDays(3);
 		
 		List<Sessao> sessoes = espetaculo.criaSessoes(dataInicio.toLocalDate(), dataFim.toLocalDate(), dataInicio.toLocalTime(), Periodicidade.DIARIA);
-		int dias = Days.daysBetween(dataInicio, dataFim).getDays();
+		int dias = Days.daysBetween(dataInicio, dataFim).getDays()+1;
 		
 		Assert.assertEquals(dias, sessoes.size());
 		
